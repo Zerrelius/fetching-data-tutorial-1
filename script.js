@@ -81,15 +81,12 @@ async function fetchAlbumTitle() {
         }
 
         const json = await response.json();
-        console.log(json);
-        console.log("Json Daten geladen!")
 
         json.forEach((album) => {
             const newData = {
                 id: Date.now(),
                 text: album.title
             }
-            console.log(newData);
 
             titles.push(newData);
         });
